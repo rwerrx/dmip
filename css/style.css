@@ -8,19 +8,24 @@
 }
 
 .container {
-    max-width: 980px;
+    max-width: 1240px;
     margin: 0 auto;
 }
 
-nav {
+header .container {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    height: 70px;
 }
 
-nav h1 {
+.site-menu {
+    height: 90px;
+    display: flex;
+    align-items: center;
+}
+
+.header-top h1 {
     color: white;
     margin: 5px;
     position: absolute;
@@ -29,17 +34,11 @@ nav h1 {
     font-weight: 400;
 }
 
-.site-menu {
-    display: flex;
-    justify-content: center;
-}
-
 .site-menu a {
-
     color: white;
-    margin: 35px;
+    margin: 30px;
     font-family: 'Lato';
-    font-size: 12px;
+    font-size: 15px;
 }
 
 .site-menu a:not(:first-child) {
@@ -52,106 +51,131 @@ nav h1 {
 
 .header-bottom {
     background-color: #ECECEC;
+    height: 25px;
+}
+
+.header-bottom .container {
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 15px;
+    align-items: center;
 }
 
 .header-bottom a {
     color: #353FD5;
-    margin: 10px;
-    font-size: 13px;
+    font-size: 15px;
 }
 
 .main-section .container {
+    background-color: #ECECEC;
+    height: 500px;
+}
+
+.main-section .border {
     display: flex;
-    background-color: #B2854E;
+    background-color: #B18753;
     align-items: center;
-    margin-top: 20px;
-    height: 350px;
+    margin-top: 25px;
+    height: 470px;
+    padding: 50px;
+    justify-content: space-evenly;
 }
 
-.main-section .left-column h1,
 
-.left-column {
-    margin-left: 60px;
+
+ .left-column {
+
+    width: 370px;
+    height: 400px;
+    flex-direction: column;
+
 }
+
+
 
 .left-column h1 {
-    font-weight: 400;
-    margin-left: -30px;
-    
-    font-size: 40px;
     color: white;
-    text-align: left;
+    font-weight: 400;
+    font-size: 50px;
+    margin-top: 20px;
 }
 
 .left-column p {
-    font-size: 10px;
-    width: 265px;
-    height: 50px;
-    letter-spacing: 1px;
     color: white;
-    text-align: left;
+    margin-top: 100px;
 }
 
 .left-column h3 {
-    font-weight: 400;
-    font-size: 15px;
     color: white;
+    margin-top: 50px;
+    font-weight: 400;
 }
 
 .main-section img {
-    width: 500px;
-    height: 300px;
+    width: 600px;
+    height: 350px;
     margin-left: 100px;
 }
+
 
 .lower-section {
     background-color: #E6E6E6;
     display: flex;
-    justify-content: center;
-    margin-top: 20px;
+
+    margin-top: 60px;
+    padding: 25px;
 }
 
 .lower-section .container {
     display: flex;
+    justify-content: center;
 }
 
-.title-2,
-.title-3,
-.title-4 {
+.title {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     background-color: #F2F2F2;
-    width: 200px;
-    height: 250px;
+    width: 260px;
+    height: 300px;
     padding: 10px;
     margin: 20px;
     position: relative;
     margin-bottom: 40px;
 }
 
-.title-2,
-.title-3,
-.title-4,
-h1 {
+.title h1 {
     color: #B2854E;
     font-weight: 400;
 }
-.title-2,
-.title-3,
-.title-4, 
-p {
+
+.title p {
     font-size: 10px;
     color: black;
     text-align: center;
+    font-size: 13px;
 }
+
 .lower-section button {
-    height: 36px;
-    width: 105px;
+    height: 50px;
+    width: 150px;
     position: absolute;
-    bottom: -18px;
+    bottom: -25px;
     background-color: #B2854E;
     border: none;
     color: white;
-    font-size: 10px;
+    font-size: 15px;
+}
+
+.lower-section .container div:nth-child(1) h1::before {
+    content: "";
+    display: block;
+    
+    background-image: url("../img/location.png");
+    height: 100px;
+    width: 100px;
+    background-position: center center;
+    background-size: cover;
+
 }
