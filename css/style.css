@@ -4,6 +4,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+}
+
+html {
     font-family: 'Lato';
 }
 
@@ -20,9 +24,12 @@ header .container {
 }
 
 .site-menu {
-    height: 90px;
     display: flex;
     align-items: center;
+}
+
+.header-top {
+    padding: 35px;
 }
 
 .header-top h1 {
@@ -36,7 +43,8 @@ header .container {
 
 .site-menu a {
     color: white;
-    margin: 30px;
+    /* margin: 30px; */
+    margin: 0 30px;
     font-family: 'Lato';
     font-size: 15px;
 }
@@ -60,6 +68,7 @@ header .container {
     justify-content: flex-start;
     padding-left: 15px;
     align-items: center;
+    position: relative;
 }
 
 .header-bottom a {
@@ -67,7 +76,16 @@ header .container {
     font-size: 15px;
 }
 
-.main-section .container {
+.header-bottom .container::after {
+    content: "";
+    position: absolute;
+    left: -13px;
+    bottom: -28px;
+    border: 13px solid transparent;
+    border-top: 20px solid #ECECEC;
+}
+
+.main-section .container {  
     background-color: #ECECEC;
     height: 500px;
 }
@@ -78,7 +96,7 @@ header .container {
     align-items: center;
     margin-top: 25px;
     height: 470px;
-    padding: 50px;
+    padding: 70px;
     justify-content: space-evenly;
 }
 
@@ -86,7 +104,7 @@ header .container {
 
 .left-column {
 
-    width: 370px;
+    width: 360px;
     height: 400px;
     flex-direction: column;
 
@@ -108,6 +126,7 @@ header .container {
 
 .left-column h3 {
     color: white;
+    font-size: 20px;
     margin-top: 50px;
     font-weight: 400;
 }
@@ -117,13 +136,27 @@ header .container {
     height: 350px;
     margin-left: 100px;
 }
+.border::before {
+    content: "";
+    display: block;
+    background: url("../img/left-arrow.png"), #353FD5;
+    padding: 5px;
+    height: 50px;
+    width: 50px;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
+
+
 
 
 .lower-section {
     background-color: #E6E6E6;
     display: flex;
 
-    margin-top: 60px;
+    margin: 40px 0;
     padding: 25px;
 }
 
@@ -132,90 +165,80 @@ header .container {
     justify-content: center;
 }
 
-.title {
+.card {
     text-align: center;
-    /* display: flex;
-    flex-wrap: wrap;
-    justify-content: center; */
     background-color: #F2F2F2;
     width: 270px;
     height: 320px;
-    padding: 20px;
+    padding: 30px;
     margin: 20px;
     position: relative;
 }
 
-.title h3 {
+.card h3 {
     color: #B2854E;
     font-size: 25px;
     font-weight: 400;
     text-align: center;
+    margin: 15px 0;
 }
 
 
-
-
-.lower-section .container div:nth-child(1)::before {
+.lower-section .container div::before {
     content: "";
     display: block;
-   
-    background-image: url("../img/location.png");
-    height: 80px;
-    width: 110px;
+    height: 90px;
+    width: 120px;
     margin-bottom: 20px;
     margin: 0 auto;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
 
+}
+
+.lower-section .container div:nth-child(1)::before {
+    background-image: url("../img/location.png");
 }
 
 .lower-section .container div:nth-child(2)::before {
-    content: "";
-    display: block;
-
     background-image: url("../img/cloud.png");
-    height: 80px;
-    width: 110px;
-    margin-bottom: 20px;
-    margin: 0 auto;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-
-
 }
 
 .lower-section .container div:nth-child(3)::before {
-    content: "";
-    display: block;
-
     background-image: url("../img/building.png");
-    height: 80px;
-    width: 110px;
-    margin-bottom: 20px;
-    margin: 0 auto;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-
 }
 
-.title p {
-    
+.card p {
+
     color: black;
     text-align: center;
     font-size: 12px;
 }
 
-.lower-section button {
-    height: 45px;
-    width: 150px;
+.lower-section a {
+
+    width: 130px;
     position: absolute;
     bottom: -25px;
     background-color: #B2854E;
     border: none;
     color: white;
     font-size: 15px;
-    left: calc();
+    left: 70px;
+    padding: 18px;
+    text-decoration: none;
+}
+
+footer {
+    background-color: #353FD5;
+    height: 120px;
+    padding: 20px;
+}
+
+footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 5px;
 }
