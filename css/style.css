@@ -84,7 +84,7 @@ header .container {
 
 
 
- .left-column {
+.left-column {
 
     width: 370px;
     height: 400px;
@@ -133,32 +133,83 @@ header .container {
 }
 
 .title {
-    display: flex;
+    text-align: center;
+    /* display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center; */
     background-color: #F2F2F2;
-    width: 260px;
-    height: 300px;
-    padding: 10px;
+    width: 270px;
+    height: 320px;
+    padding: 20px;
     margin: 20px;
     position: relative;
-    margin-bottom: 40px;
 }
 
-.title h1 {
+.title h3 {
     color: #B2854E;
+    font-size: 25px;
     font-weight: 400;
+    text-align: center;
+}
+
+
+
+
+.lower-section .container div:nth-child(1)::before {
+    content: "";
+    display: block;
+   
+    background-image: url("../img/location.png");
+    height: 80px;
+    width: 110px;
+    margin-bottom: 20px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+
+}
+
+.lower-section .container div:nth-child(2)::before {
+    content: "";
+    display: block;
+
+    background-image: url("../img/cloud.png");
+    height: 80px;
+    width: 110px;
+    margin-bottom: 20px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+
+
+}
+
+.lower-section .container div:nth-child(3)::before {
+    content: "";
+    display: block;
+
+    background-image: url("../img/building.png");
+    height: 80px;
+    width: 110px;
+    margin-bottom: 20px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+
 }
 
 .title p {
-    font-size: 10px;
+    
     color: black;
     text-align: center;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .lower-section button {
-    height: 50px;
+    height: 45px;
     width: 150px;
     position: absolute;
     bottom: -25px;
@@ -166,16 +217,5 @@ header .container {
     border: none;
     color: white;
     font-size: 15px;
-}
-
-.lower-section .container div:nth-child(1) h1::before {
-    content: "";
-    display: block;
-    
-    background-image: url("../img/location.png");
-    height: 100px;
-    width: 100px;
-    background-position: center center;
-    background-size: cover;
-
+    left: calc();
 }
