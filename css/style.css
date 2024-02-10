@@ -85,9 +85,10 @@ header .container {
     border-top: 20px solid #ECECEC;
 }
 
-.main-section .container {  
+.main-section .container {
     background-color: #ECECEC;
     height: 500px;
+    position: relative;
 }
 
 .main-section .border {
@@ -98,6 +99,7 @@ header .container {
     height: 470px;
     padding: 70px;
     justify-content: space-evenly;
+    position: relative;
 }
 
 
@@ -136,22 +138,68 @@ header .container {
     height: 350px;
     margin-left: 100px;
 }
+
 .border::before {
     content: "";
     display: block;
     background: url("../img/left-arrow.png"), #353FD5;
-    padding: 5px;
+    /* padding: 30px; */
     height: 50px;
-    width: 50px;
+    width: 48px;
     background-position: center center;
-    background-size: contain;
+    background-size: 24px 40px;
     background-repeat: no-repeat;
-    
+    position: absolute;
+    left: -23px;
+
+}
+
+.border::after {
+    content: "";
+    display: block;
+    background: url("../img/right-arrow.png"), #353FD5;
+    /* padding: 30px; */
+    height: 50px;
+    width: 48px;
+    background-position: center center;
+    background-size: 24px 40px;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: -23px;
 }
 
 
 
 
+/* .main-section .container::after {
+    content: "";
+    background-color: #353FD5;
+    width: 70px;
+    height: 5px;
+    display: block;
+    position: absolute;
+    left: 620px;
+
+} */
+.slider-control {
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    align-items: center;
+}
+.slider-control span {
+    width: 65px;
+    height: 5px;
+    margin: 0 7px;
+    align-items: center;
+}
+.span-2 {
+    background-color: #353FD5;
+}
+.span-1 {
+    background-color: #B5B6B0;
+
+}
 .lower-section {
     background-color: #E6E6E6;
     display: flex;
